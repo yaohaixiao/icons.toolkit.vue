@@ -44,7 +44,7 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new HtmlInlineScriptPlugin({
-        scriptMatchPattern: [/runtime[.-]?(.*?)\.js$/, /app[.-]?(.*?)\.js$/]
+        scriptMatchPattern: [/runtime[.-]?(.*?)\.js$/]
       }),
       new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin)
     ],
@@ -90,55 +90,54 @@ module.exports = {
       // 使用 HtmlWebpackInlineSourcePlugin 插件将
       // app.css 公共样式写入到 index.html，以优化性能
       args[0].inlineSource = 'app.(.*?).(css)$'
-      args[0].title = `icons.js Toolkit | ${description}`
+      args[0].title = `icons.toolkit.vue | ${description}`
       args[0].keywords = `javascript,svg,icons,toolkit,vue`
       args[0].description = description
 
       return args
     })
 
-    config.when(buildFor === 'docs', (config) => {
-      // http://www.yaohaixiao.com/blog/preload-key-requests/
-      // it can improve the speed of the first screen, it is recommended to turn on preload
-      // 预加载资源
-      config
-        .plugin('preload')
-        .use(PreloadWebpackPlugin)
-        .tap(() => [
-          {
-            rel: 'preload',
-            // https://github.com/vuejs/vue-cli/blob/dev/packages/@vue/cli-service/lib/config/app.js#L171
-            // 预加载忽略以下文件：
-            // .map 文件是非必须的
-            // hot-update 为本地开发时的临时文件
-            // runtime.js 和 app.js 这些公共脚本使用 HtmlInlineScriptPlugin 插件写入到 index.html 文件中
-            fileBlacklist: [
-              /\.map$/,
-              /hot-update\.js$/,
-              /runtime[.-]?(.*?)\.js$/,
-              /app[.-]?(.*?)\.(js|css)$/
-            ],
-            // initial, asyncChunks, all, allAssets
-            include: 'initial'
-          }
-        ])
+    // http://www.yaohaixiao.com/blog/preload-key-requests/
+    // it can improve the speed of the first screen, it is recommended to turn on preload
+    // 预加载资源
+    config
+      .plugin('preload')
+      .use(PreloadWebpackPlugin)
+      .tap(() => [
+        {
+          rel: 'preload',
+          // https://github.com/vuejs/vue-cli/blob/dev/packages/@vue/cli-service/lib/config/app.js#L171
+          // 预加载忽略以下文件：
+          // .map 文件是非必须的
+          // hot-update 为本地开发时的临时文件
+          // runtime.js 和 app.js 这些公共脚本使用 HtmlInlineScriptPlugin 插件写入到 index.html 文件中
+          fileBlacklist: [
+            /\.map$/,
+            /hot-update\.js$/,
+            /runtime[.-]?(.*?)\.js$/
+          ],
+          // initial, asyncChunks, all, allAssets
+          include: 'initial'
+        }
+      ])
 
-      // http://www.yaohaixiao.com/blog/preload-key-requests/
-      // prefetch 预取配置，优化前端性能
-      config
-        .plugin('prefetch')
-        .use(PreloadWebpackPlugin)
-        .tap(() => [
-          {
-            rel: 'prefetch',
-            // fileBlacklist: [/(Page|Module)(.*?)\.(js|css)$/],
-            include: {
-              type: 'asyncChunks',
-              entries: ['app']
-            }
+    // http://www.yaohaixiao.com/blog/preload-key-requests/
+    // prefetch 预取配置，优化前端性能
+    config
+      .plugin('prefetch')
+      .use(PreloadWebpackPlugin)
+      .tap(() => [
+        {
+          rel: 'prefetch',
+          // fileBlacklist: [/(Page|Module)(.*?)\.(js|css)$/],
+          include: {
+            type: 'asyncChunks',
+            entries: ['app']
           }
-        ])
+        }
+      ])
 
+    config.when(process.env.NODE_ENV !== 'development', (config) => {
       // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
       config.optimization.runtimeChunk('single').splitChunks({
         // 表示选择哪些 chunks 进行分割，可选值有：

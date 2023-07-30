@@ -21,7 +21,7 @@
  */
 import Icon from '@/components/BaseIcon'
 import { copyToClipboard } from '@/utils/utils'
-import decodeHTML from '@/utils/string'
+import decodeHTML from '@/utils/string/decodeHTML'
 
 export default {
   name: 'BaseUsageCode',

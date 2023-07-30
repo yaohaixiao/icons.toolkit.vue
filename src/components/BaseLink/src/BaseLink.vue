@@ -100,7 +100,8 @@ export default {
         `util-anchor-${this.type}`,
         {
           'util-anchor-underline': this.underline,
-          clsDisabled
+          clsDisabled,
+          'base-link_icon': this.icon
         }
       ]
     }

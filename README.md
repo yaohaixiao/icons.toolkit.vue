@@ -52,7 +52,7 @@ icons.toolkit.vue 是 icons.js 配套的工具箱，是其中使用的 BaseIcon 
 
 ```js
 // 导入 icons.js 中可以直接使用的 symbols 数据
-import ICONS from '@yaohaixiao/icons.toolkit.vue/assets/brankic1979/icons'
+import ICONS from '@yaohaixiao/icons.toolkit.vue/assets/brankic/icons'
 
 // 导入 icons.js 的功能函数
 import paint from '@yaohaixiao/icons.js/paint'
@@ -78,7 +78,7 @@ document.querySelector('#button__up').appendChild($icon)
 
 ```js
 // 导入 icons.js 中可以直接使用的 symbols 数据
-import ICONS from '@yaohaixiao/icons.js-toolkit/assets/brankic1979/icons'
+import ICONS from '@yaohaixiao/icons.js-toolkit/assets/brankic/icons'
 // 导入 icons.js 的 Icon 组件
 import Icon from '@yaohaixiao/icons.js/components/Icon'
 

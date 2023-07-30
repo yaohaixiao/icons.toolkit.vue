@@ -49,7 +49,7 @@
  */
 import Icon from '@/components/BaseIcon'
 
-import stripScripts from '@/utils/string'
+import stripScripts from '@/utils/string/stripScripts'
 
 export default {
   name: 'BaseTips',

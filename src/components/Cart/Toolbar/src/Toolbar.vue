@@ -45,6 +45,8 @@ import BaseToolbar from '@/components/BaseToolbar'
 import BaseCheckbox from '@/components/BaseCheckbox'
 import BaseButton from '@/components/BaseButton'
 
+import getSymbols from '@yaohaixiao/icons.js/getSymbols'
+
 let guid = 0
 
 export default {
@@ -164,5 +166,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import 'toolbar';
+@import './toolbar';
 </style>

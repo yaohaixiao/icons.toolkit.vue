@@ -128,11 +128,16 @@
  * Created By: Yaohaixiao
  * Update: 2022.11.12
  */
+import Icon from '@/components/BaseIcon'
+
 import { debounce } from '@/utils/utils'
 
 export default {
   name: 'BaseInput',
   componentName: 'BaseInput',
+  components: {
+    Icon
+  },
   props: {
     value: {
       type: [String, Number],

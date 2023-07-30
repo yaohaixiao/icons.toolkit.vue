@@ -39,8 +39,12 @@
   .ijs-icon {
     position: absolute;
     z-index: 2;
-    top: 9px;
-    left: 9px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &_prev,
@@ -51,6 +55,16 @@
   &_prev {
     .ijs-icon {
       transform: rotate(-180deg);
+      &__svg {
+        margin-top: 6px;
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &_next {
+    .ijs-icon__svg {
+      margin-top: 0;
     }
   }
 

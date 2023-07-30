@@ -7,7 +7,9 @@
 import Vue from 'vue'
 import BaseMessage from './src/BaseMessage.vue'
 
-import { isFunction, isString, isVNode } from '@/utils/typeof'
+import isFunction from '@/utils/types/isFunction'
+import isString from '@/utils/types/isString'
+import isVNode from '@/utils/types/isVNode'
 
 const TYPES = ['success', 'warning', 'info', 'error']
 

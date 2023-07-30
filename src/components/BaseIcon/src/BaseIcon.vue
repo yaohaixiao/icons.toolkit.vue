@@ -1,5 +1,9 @@
 <template>
-  <icon :name="name" :size="size" :color="color" :iconSet="iconSet" />
+  <icon
+    :name="name"
+    :size="size"
+    :color="color"
+    :iconSet="iconSet" />
 </template>
 
 <script>

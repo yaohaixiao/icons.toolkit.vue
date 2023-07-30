@@ -1,14 +1,14 @@
 <template>
   <div
     id="cart"
-    :class="['cart-bar', { 'is-hidden': !isShow }]"
+    :class="['cart-toolbar', { 'is-hidden': !isShow }]"
     @click="onToggle">
-    <div class="cart-bar__icon">
+    <div class="cart-toolbar__icon">
       <icon
         name="put-on"
         :size="30" />
     </div>
-    <sup class="cart-bar__count">{{ count }}</sup>
+    <sup class="cart-toolbar__count">{{ count }}</sup>
   </div>
 </template>
 
@@ -22,8 +22,8 @@
 import Icon from '@/components/BaseIcon'
 
 export default {
-  name: 'Toolbar',
-  componentName: 'Toolbar',
+  name: 'CartToolbar',
+  componentName: 'CartToolbar',
   components: {
     Icon
   },
@@ -58,10 +58,10 @@ export default {
 
     $body.appendChild($cart)
 
-    this.$subscribe('show:cart', this.show)
+    this.$subscribe('toolkit:show:toolbar', this.show)
   },
   beforeDestroy() {
-    this.$unsubscribe('show:cart', this.show)
+    this.$unsubscribe('toolkit:show:toolbar', this.show)
   },
   methods: {
     update() {
@@ -81,11 +81,11 @@ export default {
 
       if (this.isShow) {
         setTimeout(() => {
-          this.$broadcast('hide:drawer')
+          this.$broadcast('toolkit:hide:cart')
         }, 300)
       } else {
         setTimeout(() => {
-          this.$broadcast('show:drawer')
+          this.$broadcast('toolkit:show:cart')
         }, 300)
       }
     }

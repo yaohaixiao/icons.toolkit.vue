@@ -5,7 +5,7 @@
  * Update: 2022.12.8
  */
 import { cloneDeep, debounce } from '@/utils/utils'
-import { isUndefined, isArray } from '@/utils/typeof'
+import isUndefined from '@/utils/types/isUndefined'
 import paint from '@yaohaixiao/icons.js/paint'
 
 export default function (iconSet = []) {
@@ -20,7 +20,7 @@ export default function (iconSet = []) {
         symbols: [],
         count: 0,
         page: 1,
-        size: 60
+        size: 48
       }
     },
     created() {
@@ -36,14 +36,14 @@ export default function (iconSet = []) {
         this.iconSet = defaultSet
         this.querySymbols = symbols || []
         this.count = symbols.length
-        this.symbols = symbols.splice(0, this.size)
+        this.symbols = cloneDeep(symbols).splice(0, this.size)
       },
       getSymbolName(symbol) {
         const matches = symbol.match(/icon-(\w+(-\w+)*)+/)
         return matches[1] || ''
       },
       getSymbols(keyword) {
-        const size = this.size || 60
+        const size = this.size || 48
         const symbols = this.iconSet.symbols.filter((symbol) => {
           const name = this.getSymbolName(symbol).toLowerCase()
 
@@ -55,7 +55,7 @@ export default function (iconSet = []) {
         this.querySymbols = cloneDeep(symbols)
 
         if (length > size && !isUndefined(this.page)) {
-          this.symbols = symbols.splice(0, size)
+          this.symbols = cloneDeep(symbols).splice(0, size)
         } else {
           this.symbols = symbols
         }
@@ -69,6 +69,9 @@ export default function (iconSet = []) {
       onPageChange(page) {
         const size = this.size
         const icons = cloneDeep(this.querySymbols)
+
+        console.log('page', page)
+        console.log('count', icons.length)
 
         this.page = page
         this.symbols = icons.splice((page - 1) * size, size)

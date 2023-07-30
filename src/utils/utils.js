@@ -4,7 +4,7 @@
  * Created By: Yaohaixiao
  * Update: 2022.10.9
  */
-
+import isArray from './types/isArray'
 /**
  * 复制文本
  * =============================================================
@@ -82,7 +82,7 @@ export const cloneDeep = (obj) => {
       typeof obj[key] === 'object' ? cloneDeep(obj[key]) : obj[key])
   })
 
-  if (Array.isArray(obj)) {
+  if (isArray(obj)) {
     clone.length = obj.length
     return Array.from(clone)
   }

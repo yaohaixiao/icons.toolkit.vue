@@ -72,7 +72,7 @@ import BaseCheckbox from '@/components/BaseCheckbox'
 import BaseTag from '@/components/BaseTag'
 import Icon from '@/components/BaseIcon'
 
-import closest from '@/utils/dom'
+import closest from '@/utils/dom/closest'
 
 const CLS_ITEM = 'cart-drawer-item'
 const CLS_OVER = `${CLS_ITEM}_over`

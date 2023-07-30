@@ -96,10 +96,6 @@ export default {
   &__item {
     min-height: 40px;
     line-height: 40px;
-
-    + .app-menu__item {
-      margin-top: 5px;
-    }
   }
 
   &__title {

@@ -12,6 +12,8 @@
         </keep-alive>
       </base-main>
     </base-main>
+    <toolbar :items="icons" />
+    <cart :items="icons" />
   </base-container>
 </template>
 
@@ -28,6 +30,14 @@ import BaseMain from '@/components/BaseMain'
 import AppHeader from './AppHeader.vue'
 import AppAside from './AppAside.vue'
 
+// 动态加载组件
+import Toolbar from '@/components/Toolbar'
+import Cart from '@/components/Cart'
+
+import setStorage from '@/utils/storage/setStorage'
+import getStorage from '@/utils/storage/getStorage'
+import clearStorage from '@/utils/storage/clearStorage'
+
 import ICONS from '@/assets/default/icons'
 import paint from '@yaohaixiao/icons.js/paint'
 
@@ -40,7 +50,9 @@ export default {
     BaseContainer,
     BaseMain,
     AppHeader,
-    AppAside
+    AppAside,
+    Toolbar,
+    Cart
   },
   data() {
     return {
@@ -49,32 +61,32 @@ export default {
   },
   watch: {
     icons() {
-      // setStorage('svg.icon.set', JSON.stringify(this.icons))
-      // this.$broadcast('update:icons')
+      setStorage('toolkit:icons', JSON.stringify(this.icons))
+      this.$broadcast('toolkit:update:icons')
     }
   },
   created() {
     this.update()
   },
   mounted() {
-    // this.$subscribe('add:icon', this.add)
-    // this.$subscribe('remove:icon', this.remove)
-    // this.$subscribe('clean:cart', this.clean)
+    this.$subscribe('toolkit:add:icon', this.add)
+    this.$subscribe('toolkit:remove:icon', this.remove)
+    this.$subscribe('toolkit:clean:cart', this.clean)
   },
   beforeDestroy() {
-    // this.$unsubscribe('add:icon', this.add)
-    // this.$unsubscribe('remove:icon', this.remove)
-    // this.$unsubscribe('clean:cart', this.clean)
+    this.$unsubscribe('toolkit:add:icon', this.add)
+    this.$unsubscribe('toolkit:remove:icon', this.remove)
+    this.$unsubscribe('toolkit:clean:cart', this.clean)
 
-    // clearStorage('svg.icon.set')
+    clearStorage('toolkit:icons')
   },
   methods: {
     update() {
-      // const icons = getStorage('icons.toolkit.set')
-      //
-      // if (icons) {
-      //   this.icons = JSON.parse(icons)
-      // }
+      const icons = getStorage('toolkit:icons')
+
+      if (icons) {
+        this.icons = JSON.parse(icons)
+      }
     },
     add(icon) {
       const icons = [...this.icons]

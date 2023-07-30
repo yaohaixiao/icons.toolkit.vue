@@ -85,7 +85,8 @@ import BaseButton from '@/components/BaseButton'
 import Icon from '@/components/BaseIcon'
 
 import Popper from '@/utils/popper'
-import { isString, isFunction } from '@/utils/typeof'
+import isString from '@/utils/types/isString'
+import isFunction from '@/utils/types/isFunction'
 
 export default {
   name: 'DevDrawer',

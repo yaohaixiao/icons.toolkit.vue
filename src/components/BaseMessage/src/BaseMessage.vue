@@ -43,7 +43,9 @@
  * Created By: Yaohaixiao
  * Update: 2022.11.11
  */
-import { isFunction } from '@/utils/typeof'
+import Icon from '@/components/BaseIcon'
+
+import isFunction from '@/utils/types/isFunction'
 import Popper from '@/utils/popper'
 
 const TYPES = {
@@ -56,6 +58,9 @@ const TYPES = {
 export default {
   name: 'BaseMessage',
   componentName: 'BaseMessage',
+  components: {
+    Icon
+  },
   data() {
     return {
       id: 1,

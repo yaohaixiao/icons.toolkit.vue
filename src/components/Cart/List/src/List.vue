@@ -97,7 +97,7 @@ export default {
 
         this.$emit('delete', symbol)
       } else {
-        this.$broadcast('remove:icon', symbol)
+        this.$broadcast('toolkit:remove:icon', symbol)
       }
 
       this.$message.success({

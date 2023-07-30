@@ -42,7 +42,7 @@
  */
 import Icon from '@/components/BaseIcon'
 
-import { isBoolean } from '@/utils/typeof'
+import isBoolean from '@/utils/types/isBoolean'
 
 const isCheckboxGroup = ($parent) => {
   return $parent && $parent.role === 'checkbox-group'

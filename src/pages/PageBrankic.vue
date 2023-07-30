@@ -10,7 +10,7 @@
           icon="circle-arrow-left">
           Home
         </base-breadcrumb-item>
-        <base-breadcrumb-item to="/default">default</base-breadcrumb-item>
+        <base-breadcrumb-item current>Brankic 1979 图标集</base-breadcrumb-item>
       </base-breadcrumb>
       <template v-slot:filter>
         <div class="page__filter">
@@ -29,7 +29,7 @@
     <base-main padding="outer">
       <article class="article">
         <h1 class="article__h1">{{ BrankicSet.title }}</h1>
-        <meta
+        <copyright-meta
           :designer="BrankicSet.designer"
           :homepage="BrankicSet.homepage"
           :license="BrankicSet.license" />
@@ -41,7 +41,7 @@
           :columns="6"
           :gap="16"
           class="article__grid">
-          <card
+          <icon-card
             v-for="(symbol, j) in symbols"
             :key="`card-${j}`"
             :symbol="symbol" />
@@ -52,10 +52,7 @@
     <base-footer
       flex
       height="inner">
-      <div class="util-align-left base-footer__navigation">
-        Prev Page：
-        <router-link to="/icons/default">Default 图标库</router-link>
-      </div>
+      <div class="util-align-left base-footer__navigation"></div>
       <div class="util-align-center base-footer__navigation">
         <base-pagination
           :page="page"
@@ -68,7 +65,7 @@
       </div>
       <div class="util-align-right base-footer__navigation">
         Next Page：
-        <router-link to="/icons/broccolidry">Broccolidry 图标库</router-link>
+        <router-link to="/broccolidry">Broccolidry 图标库</router-link>
       </div>
     </base-footer>
   </base-container>
@@ -94,15 +91,15 @@ import BaseGrid from '@/components/BaseGrid'
 import BaseEmpty from '@/components/BaseEmpty'
 import BasePagination from '@/components/BasePagination'
 
-import Meta from './components/Meta'
-import Card from './components/Card'
+import CopyrightMeta from './components/CopyrightMeta'
+import IconCard from './components/IconCard'
 
 import PagesUtils from '@/mixins/pages-utils'
-import BrankicSet from '../../assets/brankic1979'
+import BrankicSet from '../../assets/brankic'
 
 export default {
-  name: 'PageDefault',
-  componentName: 'PageDefault',
+  name: 'PageBrankic',
+  componentName: 'PageBrankic',
   components: {
     BaseContainer,
     BaseHeader,
@@ -114,8 +111,8 @@ export default {
     BaseGrid,
     BaseEmpty,
     BasePagination,
-    Meta,
-    Card
+    CopyrightMeta,
+    IconCard
   },
   mixins: [PagesUtils(BrankicSet)],
   data() {
