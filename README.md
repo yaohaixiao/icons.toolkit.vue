@@ -3,6 +3,8 @@
 [![npm version](https://img.shields.io/npm/v/@yaohaixiao/icons.toolkit.vue)](https://www.npmjs.com/package/@yaohaixiao/icons.toolkit.vue)
 [![prettier code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![Coverage](https://codecov.io/gh/yaohaixiao/icons.toolkit.vue/branch/main/graph/badge.svg)](https://codecov.io/gh/yaohaixiao/icons.toolkit.vue)
+[![npm downloads](https://img.shields.io/npm/dt/@yaohaixiao/icons.toolkit.vue)](https://npmcharts.com/compare/@yaohaixiao/icons.toolkit.vue?minimal=true)
 [![MIT License](https://img.shields.io/github/license/yaohaixiao/icons.toolkit.vue)](https://github.com/yaohaixiao/icons.toolkit.vue/blob/main/LICENSE)
 
 icons.toolkit.vue - 专为 icons.js 配套的工具箱。
