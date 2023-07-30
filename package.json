@@ -1,6 +1,6 @@
 {
   "name": "@yaohaixiao/icons.toolkit.vue",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "专为 icons.js 配套的工具箱。",
   "main": "index.js",
   "repository": {
