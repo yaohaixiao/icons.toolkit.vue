@@ -1,0 +1,37 @@
+/**
+ * base-base-usage-footer.less - BaseFooter 组件样式
+ * =============================================================
+ * Created By: Yaohaixiao
+ * Update: 2022.10.8
+ */
+.base-footer {
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: auto;
+    align-items: center;
+
+    .base-footer__navigation,
+    .base-footer__inner {
+      flex: 1;
+    }
+
+    .base-footer__navigation {
+      color: @fourth_text_color;
+
+      &:first-child,
+      &:last-child {
+        width: 25%;
+        flex: none;
+      }
+    }
+  }
+}

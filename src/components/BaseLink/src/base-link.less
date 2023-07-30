@@ -1,0 +1,32 @@
+/**
+ * base-link.less - BaseLink 组件样式
+ * =============================================================
+ * Created By: Yaohaixiao
+ * Update: 2022.10.9
+ */
+.base-link {
+  display: inline-block;
+  vertical-align: middle;
+
+  + .base-link {
+    margin-left: 10px;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    + .base-link__inner {
+      padding-left: 6px;
+    }
+  }
+
+  &__inner {
+    display: inline-block;
+    vertical-align: middle;
+
+    .ijs-icon {
+      padding-left: 6px;
+    }
+  }
+}

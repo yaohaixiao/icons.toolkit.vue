@@ -1,0 +1,128 @@
+/**
+ * article.less - article  文章正文内容相关样式
+ * =============================================================
+ * Created By: Yaohaixiao
+ * Update: 2022.10.10
+ */
+.article {
+  .font_weight_regular();
+  .font_size_regular();
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+
+  &__section,
+  &__grid {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
+  }
+
+  &__h1 {
+    .font_weight_medium();
+    .line_height_huge();
+    text-align: center;
+    font-family: Georgia, 'Courier New', Consolas, Arial, sans-serif;
+    font-size: 26px;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid @primary_border_color;
+    color: @primary_text_color;
+  }
+
+  &__h2,
+  &__h3,
+  &__h4,
+  &__h5 {
+    .font_weight_medium();
+    color: @primary_text_color;
+    margin-top: 24px;
+  }
+
+  &__h2 {
+    .font_size_huge();
+  }
+
+  &__h3 {
+    .font_size_large();
+  }
+
+  &__h4 {
+    .font_size_medium();
+  }
+
+  &__h5 {
+    .font_size_regular();
+  }
+
+  &__pre {
+    .font_size_regular();
+    .line_height_small();
+    .font_code_family();
+    margin: 1em auto;
+    padding: 20px;
+    background: @fourth_bg_color;
+    color: @code_text_color;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.with-border {
+      border: 1px solid @primary_border_color;
+    }
+  }
+
+  &__code {
+    .font_code_family();
+    color: @code_text_color;
+  }
+
+  &__table {
+    margin: 1em auto;
+    width: 100%;
+    border-spacing: 0;
+    overflow: hidden;
+
+    tr {
+      &:hover {
+        background-color: @hover_bg_color;
+      }
+    }
+
+    th,
+    td {
+      .line_height_medium();
+      padding: 10px 16px;
+      text-align: left;
+      border-bottom: 1px solid @primary_border_color;
+    }
+
+    th {
+      background: @secondary_bg_color;
+      font-size: @font_size_regular;
+      font-weight: @font_weight_regular;
+      color: @third_text_color;
+    }
+
+    td {
+      .font_size_small();
+    }
+
+    .cell {
+      .line_height_medium();
+      .ellipsis(1);
+    }
+  }
+
+  &__grid {
+    .radius_regular();
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__pagination {
+    margin: 2em auto;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,55 @@
+/**
+ * base-aside.less - BaseAside 组件样式
+ * =============================================================
+ * Created By: Yaohaixiao
+ * Update: 2022.10.8
+ */
+.base-aside {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  transition-duration: 0.2s;
+  overflow: auto;
+
+  &_mini {
+    width: 120px;
+  }
+
+  &_small {
+    width: 160px;
+  }
+
+  &_regular {
+    width: 208px;
+  }
+
+  &_medium {
+    width: 240px;
+  }
+
+  &_large {
+    width: 280px;
+  }
+
+  &_huge {
+    width: 320px;
+  }
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-self: auto;
+    align-items: center;
+  }
+
+  &--background {
+    background-color: @primary_bg_color;
+  }
+
+  &--collapsed {
+    width: 58px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

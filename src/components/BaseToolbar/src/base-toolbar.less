@@ -1,0 +1,75 @@
+/**
+ * base-toolbar.less - BaseToolbar 组件样式
+ * =============================================================
+ * Created By: Yaohaixiao
+ * Update: 2022.11.15
+ */
+.base-toolbar {
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &__left {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+
+    + .base-tabs-nav {
+      margin-left: 16px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 0;
+        height: 22px;
+        width: 0;
+        margin-top: -11px;
+        border-left: 1px solid @secondary_border_color;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--static {
+    .base-toolbar__right {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      overflow: hidden;
+    }
+  }
+
+  &--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: auto;
+    align-items: center;
+
+    .base-toolbar__right {
+      margin-left: auto;
+    }
+  }
+
+  .base-tabs-nav,
+  .base-tabs-nav__main,
+  .base-tabs__list,
+  .base-tabs-item {
+    line-height: 52px;
+    height: 52px;
+  }
+
+  .base-tabs-nav {
+    &:after {
+      display: none;
+    }
+  }
+}

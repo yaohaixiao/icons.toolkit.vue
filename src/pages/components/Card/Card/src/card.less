@@ -1,0 +1,41 @@
+/**
+ * card.less - Icon 示例卡片组件样式
+ * =============================================================
+ * Created By: Yaohaixiao
+ * Update: 2022.11.08
+ */
+.icon-card {
+  .radius_regular();
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 16px 16px 32px;
+  color: @third_text_color;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid @primary_border_color;
+  overflow: hidden;
+
+  &:hover {
+    .shadow_light_large();
+    background: @primary_bg_color;
+    color: @primary_color;
+
+    .icon-card-svg {
+      color: @primary_color;
+      transform: scale(1.8);
+    }
+
+    .icon-card-toolbar {
+      bottom: 0;
+    }
+  }
+
+  &.is-checked {
+    border-color: @primary_color;
+
+    .icon-card-marked {
+      display: block;
+    }
+  }
+}
