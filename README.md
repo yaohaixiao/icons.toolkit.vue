@@ -26,23 +26,23 @@ icons.toolkit.vue - 专为 icons.js 配套的工具箱。
 
 icons.toolkit.vue 目前以收集了 17 个免费且设计优美的图标集：
 
-1. @yaohaixiao/icons.js-toolkit/assets/brankic
-2. @yaohaixiao/icons.js-toolkit/assets/broccolidry
-3. @yaohaixiao/icons.js-toolkit/assets/eighty-shades
-4. @yaohaixiao/icons.js-toolkit/assets/entypo
-5. @yaohaixiao/icons.js-toolkit/assets/ever-icons
-6. @yaohaixiao/icons.js-toolkit/assets/feather
-7. @yaohaixiao/icons.js-toolkit/assets/font-awesome
-8. @yaohaixiao/icons.js-toolkit/assets/hawcons
-9. @yaohaixiao/icons.js-toolkit/assets/iconic
-10. @yaohaixiao/icons.js-toolkit/assets/linecons
-11. @yaohaixiao/icons.js-toolkit/assets/material
-12. @yaohaixiao/icons.js-toolkit/assets/meteocons
-13. @yaohaixiao/icons.js-toolkit/assets/steadysets
-14. @yaohaixiao/icons.js-toolkit/assets/typicons
-15. @yaohaixiao/icons.js-toolkit/assets/vicons
-16. @yaohaixiao/icons.js-toolkit/assets/wpzoom
-17. @yaohaixiao/icons.js-toolkit/assets/zondicons
+1. @yaohaixiao/icons.toolkit.vue/assets/brankic
+2. @yaohaixiao/icons.toolkit.vue/assets/broccolidry
+3. @yaohaixiao/icons.toolkit.vue/assets/eighty-shades
+4. @yaohaixiao/icons.toolkit.vue/assets/entypo
+5. @yaohaixiao/icons.toolkit.vue/assets/ever-icons
+6. @yaohaixiao/icons.toolkit.vue/assets/feather
+7. @yaohaixiao/icons.toolkit.vue/assets/font-awesome
+8. @yaohaixiao/icons.toolkit.vue/assets/hawcons
+9. @yaohaixiao/icons.toolkit.vue/assets/iconic
+10. @yaohaixiao/icons.toolkit.vue/assets/linecons
+11. @yaohaixiao/icons.toolkit.vue/assets/material
+12. @yaohaixiao/icons.toolkit.vue/assets/meteocons
+13. @yaohaixiao/icons.toolkit.vue/assets/steadysets
+14. @yaohaixiao/icons.toolkit.vue/assets/typicons
+15. @yaohaixiao/icons.toolkit.vue/assets/vicons
+16. @yaohaixiao/icons.toolkit.vue/assets/wpzoom
+17. @yaohaixiao/icons.toolkit.vue/assets/zondicons
 
 
 
