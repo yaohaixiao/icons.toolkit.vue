@@ -1,6 +1,8 @@
 import Vue from 'vue'
-import Emitter from '@yaohaixiao/subscribers.js/subscribers.core'
+import emit from '@yaohaixiao/subscribers.js/emit'
+import on from '@yaohaixiao/subscribers.js/on'
+import off from '@yaohaixiao/subscribers.js/off'
 
-Vue.prototype.$broadcast = Emitter.emit
-Vue.prototype.$subscribe = Emitter.on
-Vue.prototype.$unsubscribe = Emitter.off
+Vue.prototype.$broadcast = emit
+Vue.prototype.$subscribe = on
+Vue.prototype.$unsubscribe = off
