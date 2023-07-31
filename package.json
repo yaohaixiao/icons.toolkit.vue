@@ -20,6 +20,7 @@
     "url": "https://github.com/yaohaixiao/icons.toolkit.vue/issues"
   },
   "homepage": "https://github.com/yaohaixiao/icons.toolkit.vue#readme",
+  "sideEffects": false,
   "scripts": {
     "analyz": "npm run build --report",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
