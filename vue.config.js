@@ -68,19 +68,11 @@ module.exports = {
     }
   },
   chainWebpack(config) {
-    let buildFor = process.env.BUILD_FOR
-
     // when process.env.npm_config_report is true, build analyzer
     // 打包分析配置
     config.when(process.env.npm_config_report, (config) => {
       config.plugin('bundle-analyzer').use(BundleAnalyzerPlugin).end()
     })
-
-    if (buildFor) {
-      buildFor = trim(buildFor)
-    } else {
-      buildFor = ''
-    }
 
     // 构建 API 文档的 HTMLWebpackPlugin 插件配置
     config.plugin('html').tap((args) => {
