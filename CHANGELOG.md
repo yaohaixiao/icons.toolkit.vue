@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.1.0...0.2.0) (2023-07-31)
+
+
+### Features
+
+* 优化性能移除多有的图标； ([af98498](https://github.com/yaohaixiao/icons.toolkit.vue/commit/af98498f5be4aafd3617fc086ee863b53f0f4b49))
+
+
+
 # 0.1.0 (2023-07-30)
 
 
