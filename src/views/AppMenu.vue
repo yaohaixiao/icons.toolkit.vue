@@ -50,7 +50,7 @@
  * AppMenu.vue - 侧边栏主导航菜单
  * =============================================================
  * Created By: Yaohaixiao
- * Update: 2022.10.08
+ * Update: 2023.07.31
  */
 import Icon from '@/components/BaseIcon'
 import routes from '@/router/icons'

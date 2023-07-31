@@ -27,7 +27,7 @@
  * AppAside.vue - 侧边栏组件
  * =============================================================
  * Created By: Yaohaixiao
- * Update: 2022.10.08
+ * Update: 2023.07.31
  */
 import BaseMain from '@/components/BaseMain'
 import BaseFooter from '@/components/BaseFooter'
@@ -35,6 +35,9 @@ import BaseAside from '@/components/BaseAside'
 import Icon from '@/components/BaseIcon'
 
 import AppMenu from './AppMenu'
+
+import setStorage from '@/utils/storage/setStorage'
+import getStorage from '@/utils/storage/getStorage'
 
 export default {
   name: 'AppAside',
@@ -51,9 +54,17 @@ export default {
       collapsed: false
     }
   },
+  created() {
+    const collapsed = getStorage('toolkit:aside:collapsed')
+
+    if (collapsed) {
+      this.collapsed = !!(collapsed === 'true')
+    }
+  },
   methods: {
     onToggle() {
       this.collapsed = !this.collapsed
+      setStorage('toolkit:aside:collapsed', this.collapsed)
     }
   }
 }

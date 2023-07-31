@@ -19,7 +19,7 @@
  * AppLogo.vue - 应用 LOGO 区域
  * =============================================================
  * Created By: Yaohaixiao
- * Update: 2022.10.8
+ * Update: 2023.07.31
  */
 import Icon from '@/components/BaseIcon'
 
