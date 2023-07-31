@@ -11,7 +11,7 @@
  * BaseIcon.vue - SVG 图标显示组件
  * =============================================================
  * Created By: Yaohaixiao
- * Update: 2024.07.27
+ * Update: 2023.07.27
  */
 import Icon from '@yaohaixiao/icons.js/components/Icon'
 

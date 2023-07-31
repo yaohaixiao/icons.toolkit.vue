@@ -5,12 +5,16 @@
     "vue",
     "less"
   ],
+  "transformIgnorePatterns": [
+    "node_modules\\/(?!(?:.pnpm\\/)?(${esmModules.join('|')}))"
+  ],
   "transform": {
     "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-    ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    ".*\\.vue$": "<rootDir>/node_modules/vue-jest"
   },
   "moduleNameMapper": {
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "^@/(.*)$": "<rootDir>/src/$1",
+    "\\.(css|less)$": "<rootDir>/tests/mocks/styleMock.js"
   },
   "snapshotSerializers": [
     "<rootDir>/node_modules/jest-serializer-vue"
