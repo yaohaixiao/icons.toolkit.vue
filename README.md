@@ -24,13 +24,13 @@ icons.toolkit.vue - 专为 icons.js 配套的工具箱。
 
 ## 图标集
 
-icons.toolkit.vue 目前以收集了 16 个免费且设计优美的图标集：
+icons.toolkit.vue 目前以收集了 17 个免费且设计优美的图标集：
 
-1. @yaohaixiao/icons.js-toolkit/assets/brankic1979
+1. @yaohaixiao/icons.js-toolkit/assets/brankic
 2. @yaohaixiao/icons.js-toolkit/assets/broccolidry
-3. @yaohaixiao/icons.js-toolkit/assets/zondicons
-4. @yaohaixiao/icons.js-toolkit/assets/eighty-shades
-5. @yaohaixiao/icons.js-toolkit/assets/entypo
+3. @yaohaixiao/icons.js-toolkit/assets/eighty-shades
+4. @yaohaixiao/icons.js-toolkit/assets/entypo
+5. @yaohaixiao/icons.js-toolkit/assets/ever-icons
 6. @yaohaixiao/icons.js-toolkit/assets/feather
 7. @yaohaixiao/icons.js-toolkit/assets/font-awesome
 8. @yaohaixiao/icons.js-toolkit/assets/hawcons
@@ -42,6 +42,7 @@ icons.toolkit.vue 目前以收集了 16 个免费且设计优美的图标集：
 14. @yaohaixiao/icons.js-toolkit/assets/typicons
 15. @yaohaixiao/icons.js-toolkit/assets/vicons
 16. @yaohaixiao/icons.js-toolkit/assets/wpzoom
+17. @yaohaixiao/icons.js-toolkit/assets/zondicons
 
 
 
