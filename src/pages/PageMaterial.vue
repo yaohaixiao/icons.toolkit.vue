@@ -34,7 +34,7 @@
           :homepage="MATERIAL.homepage"
           :license="MATERIAL.license" />
         <h2 class="article__h2">
-          {{ `${LINECONS.title} （${count}）` }}
+          {{ `${MATERIAL.title} （${count}）` }}
         </h2>
         <base-grid
           v-if="count > 0"
