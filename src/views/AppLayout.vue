@@ -38,7 +38,7 @@ import setStorage from '@/utils/storage/setStorage'
 import getStorage from '@/utils/storage/getStorage'
 import clearStorage from '@/utils/storage/clearStorage'
 
-import ICONS from '@/assets/default/icons'
+import ICONS from '@/assets/icons'
 import paint from '@yaohaixiao/icons.js/paint'
 
 paint(ICONS)

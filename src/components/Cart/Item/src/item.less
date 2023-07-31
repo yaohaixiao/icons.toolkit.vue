@@ -128,18 +128,15 @@
     color: @fourth_text_color;
     cursor: pointer;
     overflow: hidden;
-
-    .ijs-icon {
-      position: absolute;
-      z-index: 2;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 
   &__delete {
     right: 16px;
+
+    .ijs-icon {
+      margin-top: -6px;
+      vertical-align: middle;
+    }
 
     &:hover {
       color: @danger_color;
@@ -150,6 +147,11 @@
     display: none;
     left: 0;
     cursor: move;
+
+    .ijs-icon {
+      margin-top: -6px;
+      vertical-align: middle;
+    }
 
     &:hover {
       color: @primary_color;

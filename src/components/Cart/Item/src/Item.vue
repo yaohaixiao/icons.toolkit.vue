@@ -249,5 +249,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import 'item';
+@import './item';
 </style>
