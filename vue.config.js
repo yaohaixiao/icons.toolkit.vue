@@ -13,14 +13,6 @@ const HtmlInlineScriptPlugin = require('html-inline-script-webpack-plugin')
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 const pkg = require('./package.json')
 
-const trim = (str) => {
-  if (str.trim) {
-    return str.trim()
-  } else {
-    return str.replace(/^\s+/g, '').replace(/\s+$/g, '')
-  }
-}
-
 const resolve = (dir) => {
   return path.join(__dirname, dir)
 }
@@ -64,7 +56,9 @@ module.exports = {
     },
     mode: 'production',
     optimization: {
-      usedExports: true
+      usedExports: true,
+      minimize: true,
+      concatenateModules: true
     }
   },
   chainWebpack(config) {
