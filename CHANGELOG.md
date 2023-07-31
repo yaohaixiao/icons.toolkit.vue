@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.2.0...0.2.1) (2023-07-31)
+
+
+### Bug Fixes
+
+* 修复“Material 图标集”显示错误问题 ([2862d37](https://github.com/yaohaixiao/icons.toolkit.vue/commit/2862d37741842f207cf9f5ca2b453fd422ef8726))
+
+
+
 # [0.2.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.1.0...0.2.0) (2023-07-31)
 
 
