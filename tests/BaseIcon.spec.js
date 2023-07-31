@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
-import BaeIcon from '@yaohaixiao/icons.js/components/Icon'
+import BaseIcon from '@/components/BaseIcon'
 
-describe('BaeIcon.vue', () => {
+describe('BaseIcon.vue', () => {
   const DEFAULT_SIZE = 16
   const DEFAULT_NAME = 'edit'
   const DEFAULT_COLOR = '#ddd'
@@ -13,7 +13,7 @@ describe('BaeIcon.vue', () => {
   let wrapper
 
   beforeAll(() => {
-    wrapper = shallowMount(BaeIcon, {
+    wrapper = shallowMount(BaseIcon, {
       // 配置组件 props 属性
       propsData: {
         size: DEFAULT_SIZE,
