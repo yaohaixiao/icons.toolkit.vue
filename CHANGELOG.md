@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.2.1...0.3.0) (2023-08-03)
+
+
+### Features
+
+* 添加 icons.js 默认图标集 ([6f5dc32](https://github.com/yaohaixiao/icons.toolkit.vue/commit/6f5dc324e16f1f4134cf7ebe568a81f4ed02a342))
+
+
+
 ## [0.2.1](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.2.0...0.2.1) (2023-07-31)
 
 
