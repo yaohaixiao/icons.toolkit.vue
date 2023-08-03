@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     isHome() {
-      return this.$route.name === 'PageBrankic'
+      return this.$route.name === 'PageDefault'
     }
   },
   methods: {

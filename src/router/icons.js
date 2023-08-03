@@ -6,9 +6,20 @@
  */
 export default [
   {
+    text: 'Default',
+    name: 'PageDefault',
+    icon: 'bold-home',
+    path: 'default',
+    meta: {
+      hide: false
+    },
+    component: () =>
+      import(/* webpackChunkName: "PageDefault" */ '@/pages/PageDefault.vue')
+  },
+  {
     text: 'Brankic',
     name: 'PageBrankic',
-    icon: 'bold-home',
+    icon: 'bold-interface',
     path: 'brankic',
     meta: {
       hide: false

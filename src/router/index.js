@@ -18,7 +18,7 @@ const routes = [
     path: '/',
     name: 'AppLayout',
     component: AppLayout,
-    redirect: '/brankic',
+    redirect: '/default',
     children: Icons
   }
 ]

@@ -10,7 +10,7 @@
           icon="circle-arrow-left">
           Home
         </base-breadcrumb-item>
-        <base-breadcrumb-item current>Brankic 1979 图标集</base-breadcrumb-item>
+        <base-breadcrumb-item current>icons.js 内置图标集</base-breadcrumb-item>
       </base-breadcrumb>
       <template v-slot:filter>
         <div class="page__filter">
@@ -28,13 +28,13 @@
     </base-header>
     <base-main padding="outer">
       <article class="article">
-        <h1 class="article__h1">{{ BrankicSet.title }}</h1>
+        <h1 class="article__h1">{{ ICONS_DEFAULT.title }}</h1>
         <copyright-meta
-          :designer="BrankicSet.designer"
-          :homepage="BrankicSet.homepage"
-          :license="BrankicSet.license" />
+          :designer="ICONS_DEFAULT.designer"
+          :homepage="ICONS_DEFAULT.homepage"
+          :license="ICONS_DEFAULT.license" />
         <h2 class="article__h2">
-          {{ `${BrankicSet.title} （${count}）` }}
+          {{ `${ICONS_DEFAULT.title} （${count}）` }}
         </h2>
         <base-grid
           v-if="count > 0"
@@ -52,10 +52,7 @@
     <base-footer
       flex
       height="inner">
-      <div class="util-align-left base-footer__navigation">
-        Prev Page：
-        <router-link to="/default">Brankic 1979 图标库</router-link>
-      </div>
+      <div class="util-align-left base-footer__navigation"></div>
       <div class="util-align-center base-footer__navigation">
         <base-pagination
           :page="page"
@@ -68,7 +65,7 @@
       </div>
       <div class="util-align-right base-footer__navigation">
         Next Page：
-        <router-link to="/broccolidry">Broccolidry 图标库</router-link>
+        <router-link to="/brankic">Brankic 1979 图标库</router-link>
       </div>
     </base-footer>
   </base-container>
@@ -76,10 +73,10 @@
 
 <script>
 /**
- * PageBrankic.vue - 列表页面
+ * PageDefault.vue - 列表页面
  * =============================================================
  * Created By: Yaohaixiao
- * Update: 2023.10.18
+ * Update: 2023.08.04
  */
 // 公共组件
 import BaseContainer from '@/components/BaseContainer'
@@ -98,11 +95,11 @@ import CopyrightMeta from './components/CopyrightMeta'
 import IconCard from './components/IconCard'
 
 import PagesUtils from '@/mixins/pages-utils'
-import BrankicSet from '../../assets/brankic'
+import ICONS_DEFAULT from '../../assets/icons'
 
 export default {
-  name: 'PageBrankic',
-  componentName: 'PageBrankic',
+  name: 'PageDefault',
+  componentName: 'PageDefault',
   components: {
     BaseContainer,
     BaseHeader,
@@ -117,10 +114,10 @@ export default {
     CopyrightMeta,
     IconCard
   },
-  mixins: [PagesUtils(BrankicSet)],
+  mixins: [PagesUtils(ICONS_DEFAULT)],
   data() {
     return {
-      BrankicSet
+      ICONS_DEFAULT
     }
   }
 }
