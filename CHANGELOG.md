@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.3.0...0.4.0) (2023-08-04)
+
+
+### Features
+
+* 优化性能，将 icons.js 默认图标和 toolkit 用到的图标直接静态写入到 index.html 中 ([b482217](https://github.com/yaohaixiao/icons.toolkit.vue/commit/b48221748a257b354313cc6ba5d9c4866530cb1d))
+
+
+
 # [0.3.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.2.1...0.3.0) (2023-08-03)
 
 
