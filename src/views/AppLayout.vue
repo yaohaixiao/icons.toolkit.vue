@@ -39,9 +39,7 @@ import getStorage from '@/utils/storage/getStorage'
 import clearStorage from '@/utils/storage/clearStorage'
 
 import ICONS from '@/assets/icons'
-import paint from '@yaohaixiao/icons.js/paint'
-
-paint(ICONS)
+import add from '@yaohaixiao/icons.js/add'
 
 export default {
   name: 'AppLayout',
@@ -66,6 +64,7 @@ export default {
     }
   },
   created() {
+    add(ICONS)
     this.update()
   },
   mounted() {
