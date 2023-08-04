@@ -53,16 +53,7 @@
       flex
       height="inner">
       <div class="util-align-left base-footer__navigation"></div>
-      <div class="util-align-center base-footer__navigation">
-        <base-pagination
-          :page="page"
-          :page-size="size"
-          :total-count="count"
-          :layout="['prev', 'pager', 'next']"
-          prev-text=""
-          next-text=""
-          @page-change="onPageChange" />
-      </div>
+      <div class="util-align-center base-footer__navigation"></div>
       <div class="util-align-right base-footer__navigation">
         Next Page：
         <router-link to="/brankic">Brankic 1979 图标库</router-link>
@@ -89,7 +80,6 @@ import BaseFooter from '@/components/BaseFooter'
 import BaseInput from '@/components/BaseInput'
 import BaseGrid from '@/components/BaseGrid'
 import BaseEmpty from '@/components/BaseEmpty'
-import BasePagination from '@/components/BasePagination'
 
 import CopyrightMeta from './components/CopyrightMeta'
 import IconCard from './components/IconCard'
@@ -110,7 +100,6 @@ export default {
     BaseInput,
     BaseGrid,
     BaseEmpty,
-    BasePagination,
     CopyrightMeta,
     IconCard
   },
