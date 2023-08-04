@@ -101,13 +101,21 @@ export default {
 
 #### 导入图标集
 
-icons.js-toolkit 中除了提供 symbols 数组格式的数据，还有图标集类型的数据：
+icons.js-toolkit 中除了提供 symbols 数组格式的数据，还有图标集:
 
 ```js
-// 导入图标集
+// 导入图标
+import BRANKIC from '@yaohaixiao/icons.js-toolkit/assets/brankic'
+```
+
+
+其数据格式如下：
+
+```js
+// 导入图标
 import ICONS from './icons'
 
-const BRANKIC_1979 = {
+const BRANKIC = {
   title: 'Brankic 1979 图标集',
   designer: 'Brankic1979',
   homepage: 'http://brankic1979.com/icons/',
