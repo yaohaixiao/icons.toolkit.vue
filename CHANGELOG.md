@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.4.0...0.4.1) (2023-08-14)
+
+
+### Bug Fixes
+
+* 修复导出单个 SVG 文件的注释文案错误 ([88d3226](https://github.com/yaohaixiao/icons.toolkit.vue/commit/88d322659c7021aa8628a1513c0263e16d7c8f20))
+
+
+
 # [0.4.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.3.0...0.4.0) (2023-08-04)
 
 
