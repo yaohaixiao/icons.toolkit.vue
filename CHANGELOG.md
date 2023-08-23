@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.4.1...0.5.0) (2023-08-23)
+
+
+### Features
+
+* 使用最新的 icons.js 重新构建 ([1ff4ec1](https://github.com/yaohaixiao/icons.toolkit.vue/commit/1ff4ec10750bd8163cc870e43109a3c6fe57658a))
+
+
+
 ## [0.4.1](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.4.0...0.4.1) (2023-08-14)
 
 
