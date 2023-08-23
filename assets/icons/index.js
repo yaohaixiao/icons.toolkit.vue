@@ -8,7 +8,7 @@
  * Created By: Yaohaixiao
  * Update: 2023.08.04
  */
-import ICONS from './icons'
+import ICONS from '@yaohaixiao/icons.js/assets/icons'
 
 const ICONS_DEFAULT = {
   title: 'icons.js 内置图标集',

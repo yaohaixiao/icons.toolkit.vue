@@ -70,9 +70,6 @@ export default function (iconSet = []) {
         const size = this.size
         const icons = cloneDeep(this.querySymbols)
 
-        console.log('page', page)
-        console.log('count', icons.length)
-
         this.page = page
         this.symbols = icons.splice((page - 1) * size, size)
       }

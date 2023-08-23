@@ -1,6 +1,6 @@
 {
   "name": "@yaohaixiao/icons.toolkit.vue",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "专为 icons.js 配套的工具箱。",
   "main": "index.js",
   "repository": {
@@ -35,7 +35,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@yaohaixiao/icons.js": "^1.1.0",
+    "@yaohaixiao/icons.js": "^1.5.0",
     "@yaohaixiao/subscribers.js": "^1.2.0",
     "vue": "^2.6.14"
   },
