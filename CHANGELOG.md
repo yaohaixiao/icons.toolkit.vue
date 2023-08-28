@@ -1,3 +1,14 @@
+# [0.6.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.5.0...0.6.0) (2023-08-28)
+
+
+### Features
+
+1. 使用最新的 icons.js 2.0.0 重新构建；
+2. 给每个图标集的 icons.js 文件打包 umd 模块文件；
+3. 给每个图标集打包完整的 icons.svg 和单独的 svg 文件； ([311c98f](https://github.com/yaohaixiao/icons.toolkit.vue/commit/311c98fd1fe619dd061e1e31c36e38ac5fa4ba7f))
+
+
+
 # [0.5.0](https://github.com/yaohaixiao/icons.toolkit.vue/compare/0.4.1...0.5.0) (2023-08-23)
 
 
