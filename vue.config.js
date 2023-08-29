@@ -8,9 +8,7 @@ const path = require('path')
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlInlineScriptPlugin = require('html-inline-script-webpack-plugin')
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 const pkg = require('./package.json')
 
 const resolve = (dir) => {
@@ -37,8 +35,7 @@ module.exports = {
     plugins: [
       new HtmlInlineScriptPlugin({
         scriptMatchPattern: [/runtime[.-]?(.*?)\.js$/]
-      }),
-      new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin)
+      })
     ],
     resolve: {
       alias: {
@@ -73,9 +70,6 @@ module.exports = {
       const description = `${pkg.description}`
       // 将脚本插入到 body 标签中
       args[0].inject = 'body'
-      // 使用 HtmlWebpackInlineSourcePlugin 插件将
-      // app.css 公共样式写入到 index.html，以优化性能
-      args[0].inlineSource = 'app.(.*?).(css)$'
       args[0].title = `icons.toolkit.vue | ${description}`
       args[0].keywords = `javascript,svg,icons,toolkit,vue`
       args[0].description = description
